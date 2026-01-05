@@ -126,8 +126,8 @@ nav .search-bar {
   align-items: center;
 }
 .about-image {
-  width: 300px;
-  height: auto;
+  width: 240px;
+  height: 300px;
   border-radius: 50%;
   display: block;
   margin: 20px auto;

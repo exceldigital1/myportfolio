@@ -1,0 +1,443 @@
+.app {
+  padding: 20px 50px;
+  margin: 50px;
+  background-color: var(--muted);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #111827;
+  --primary: #1e40af;
+  --accent: #f97316;
+  --muted: #f8fafc;
+  --hover-accent: #dbaf77;
+  --card-bg: #ffffff;
+  --button-text: #ffffff;
+  --nav-text: #111827;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--text);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0rem;
+  color: var(--nav-text);
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary);
+  text-shadow: 1px 1px 2px black;
+
+}
+
+nav .logo span {
+  color: var(--accent);
+  text-shadow: 1px 1px 2px black;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li {
+  cursor: pointer;
+  transition: color 0.3s;
+  color: var(--accent);
+  font-size: 1.5rem;
+}
+
+nav ul li:hover {
+  text-decoration: underline;
+  color: var(--accent);
+  text-shadow: 1px 1px 2px black;
+}
+
+nav .search-bar {
+  display: flex;
+  align-items: center;
+}
+
+#main {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#main .main-links {
+  margin-top: 60px;
+}
+
+#my-work {
+  background-color: var(--accent);
+  color: #000;
+  transition: all 0.5s;
+}
+
+#my-work:hover {
+  color: #fff;
+  background-color: var(--hover-accent);
+}
+
+#my-cv:hover {
+  color: #fff;
+  background-color: var(--hover-accent);
+}
+
+.main-links a {
+  text-decoration: none;
+  color: var(--button-text);
+  font-size: 1rem;
+  background-color: var(--primary);
+  margin-right: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#main div {
+  margin: 40px 0 20px 0;
+}
+
+#main img {
+  width: 240px;
+  height: 300px;
+  border-radius: 40%;
+}
+/* about section image styling */
+.about-content {
+  margin-top: 30px;
+  text-align: center;
+  gap: 20%;
+  display: flex;
+  align-items: center;
+}
+.about-image {
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+}
+
+/* container for cards: responsive columns */
+.projects-grid {
+  display: grid;
+  text-align: center;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* card styling */
+.project-card {
+  padding: 12px;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+/* image fills card width and keeps aspect */
+.project-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.tech-list {
+  margin-top: 8px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: var(--accent);
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* play animation when parent gets .is-visible */
+.project-card.is-visible {
+  animation: cardFade 400ms ease forwards;
+}
+
+@keyframes cardFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Global image hover effects */
+img {
+  transition: transform 1s cubic-bezier(.2,.8,.2,1), filter 1s ease;
+  will-change: transform, filter;
+}
+
+img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.03) contrast(1.02);
+}
+
+img:active {
+  transform: scale(0.98);
+}
+
+/* Slightly stronger effect for project card images */
+.project-image {
+  transition: transform 1s cubic-bezier(.2,.8,.2,1), box-shadow 1ms ease;
+}
+.project-image:hover {
+  transform: scale(1.04) translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+h1 {
+  font-size: 40px;
+  color: var(--accent);
+  font-family: 'Poppins', 'Segoe UI', system-ui, Arial, sans-serif;
+  font-weight: 600;
+}
+
+/* Paragraphs and headings */
+p, body {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+h2 {
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem; /* ~24px */
+  line-height: 1.15;
+}
+
+h3 {
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.125rem; /* ~18px */
+  line-height: 1.2;
+}
+
+p {
+  font-size: 17px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 20px;
+}
+a {
+  text-decoration: none;
+}
+
+h2 {
+  color: var(--primary);
+  font-size: xx-large;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* Dark mode variables */
+:root[data-theme="dark"], body[data-theme="dark"] {
+  --bg: #0b1220;
+  --text: #e6eef8;
+  --primary: #60a5fa;
+  --accent: #fb923c;
+  --muted: #071025;
+  --hover-accent: #c67b3d;
+  --card-bg: #0f1724;
+  --button-text: #0b1220;
+  --nav-text: #e6eef8;
+}
+
+/* Light mode variables (to override prefers-color-scheme) */
+:root[data-theme="light"], body[data-theme="light"] {
+  --bg: #ffffff;
+  --text: #111827;
+  --primary: #1e40af;
+  --accent: #f97316;
+  --muted: #f8fafc;
+  --hover-accent: #dbaf77;
+  --card-bg: #ffffff;
+  --button-text: #ffffff;
+  --nav-text: #111827;
+}
+
+/* Smooth transitions for theme changes */
+html, body, .app, nav, .project-card, .project-image, .main-links a {
+  transition: background-color 300ms ease, color 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+}
+
+a, a:visited, .main-links a {
+  transition: color 220ms ease, background-color 220ms ease;
+}
+
+/* Theme toggle button styles */
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--text);
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--text);
+}
+.theme-toggle:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+.theme-item { display: flex; align-items: center; }
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--text);
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .app {
+    padding: 10px 20px;
+    margin: 10px;
+  }
+
+  nav {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  nav .logo {
+    font-size: 1.2rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  nav ul li {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  #main {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  #main img {
+    display: none;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .main-links {
+    margin-top: 30px;
+  }
+
+  .main-links a {
+    margin-right: 0.5rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .about-image {
+    width: 200px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .project-card {
+    padding: 10px;
+  }
+
+  .tech-list {
+    font-size: 0.9rem;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0ms !important;
+    scroll-behavior: auto !important;
+  }
+}

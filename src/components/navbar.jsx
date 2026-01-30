@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Navbar({ theme = "light", onToggleTheme = () => {} }) {
+function NavBar({ theme = "light", onToggleTheme = () => {} }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -38,4 +38,4 @@ function Navbar({ theme = "light", onToggleTheme = () => {} }) {
   );
 }
 
-export default Navbar;
+export default NavBar;

@@ -16,6 +16,7 @@
     "react-dom": "^18.3.1",
     "react-quill": "^2.0.0",
     "tailwindcss": "^4.1.0"
+
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

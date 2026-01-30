@@ -1,6 +1,6 @@
 import React from "react";
 import laundry from "../assets/laundry.png";
-import ProjectCard from './ProjectCard'
+import ProjectCard from './ProjectCard.jsx'
 import calculator from "../assets/calculator.png";
 import meal from "../assets/meal-generator.png";
 

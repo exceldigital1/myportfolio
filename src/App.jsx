@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Main from "./components/main";
+import Home from "./components/home";
 import About from "./components/about";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import Projects from "./components/projects";
 
 import "./App.css";
@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="app">
       <Navbar theme={theme} onToggleTheme={toggleTheme} />
-      <Main />
+      <Home />
       <About />
       <Projects />
     </div>

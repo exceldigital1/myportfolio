@@ -1,8 +1,8 @@
 import React from "react";
 
-function Main() {
+function Home() {
     return (
-        <main id="main">
+        <section id="main">
             <div>
                 <h1>Hi, I'm Saheed, A frontend Developer</h1>
                 <p>I build accessible, inclusive products and digital experiences for the web.</p>
@@ -12,8 +12,8 @@ function Main() {
                 </div>
             </div>
             <img src="https://bairesdev.mo.cloudinary.net/blog/2022/08/portrait-of-a-man-using-a-computer-in-a-modern-office-picture-id1344688156-1.jpg?tx=w_1920,q_auto" alt="Developer at work" />
-        </main>
+        </section>
     );
 }
 
-export default Main;
+export default Home;

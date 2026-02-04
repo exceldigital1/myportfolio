@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Home from "./components/home";
 import About from "./components/about";
-import NavBar from "./components/navbar";
+import NavBar from "./components/NavBar";
 import Projects from "./components/projects";
 
 import "./App.css";
